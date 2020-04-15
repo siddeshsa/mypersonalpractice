@@ -16,5 +16,17 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func loginClicked(_ sender: Any) {
+
+    let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+    
+        
+        guard let MainVC = mainStoryboard.instantiateViewController(withIdentifier: "MainController") as? MainController
+            else {
+            return
+        }
+        present(MainVC, animated: true, completion: nil)
+        
+    }
 }
 
